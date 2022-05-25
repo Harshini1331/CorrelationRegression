@@ -1,7 +1,7 @@
 # Correlation and Regression for Data Analysis
 # Aim : 
 
-To analyse given data using  coeffificient of correlation and regression line.
+To analyse given data using  coefficient of correlation and regression line.
 ![image](https://user-images.githubusercontent.com/104613195/168224136-d6b64e64-7d3d-4775-9337-c8f96fe41f2d.png)
 
 
@@ -57,4 +57,4 @@ plt.plot(x,y1,'r')
 <img width="320" alt="image" src="https://user-images.githubusercontent.com/75235554/170187077-1d9e5721-93ba-43d6-9f33-0ff5dc023985.png">
 
 # Result :
-Thus, the Coeffificient of correlation and regression line using given data was analysed.
+Thus, the Coefficient of correlation and regression line using given data was analysed.
