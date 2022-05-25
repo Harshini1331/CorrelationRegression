@@ -20,8 +20,41 @@ If y represents the dependent variable and x the independent variable, this rela
 ![image](https://user-images.githubusercontent.com/104613195/168225866-ac8f6610-bdc3-4ac2-a24e-2b24ba08e189.png)
 
 # Program
+```python
+import numpy as np
+import math
+import matplotlib.pyplot as plt
 
+x=[25,28,35,32,31,36,29,38,34,32]
+y=[43,46,49,41,36,32,31,30,33,39]
+Sx=0
+Sy=0
+Sxy=0
+Sx2=0
+Sy2=0
+for i in range(0,10):
+    Sx=Sx+x[i]
+    Sy=Sy+y[i]
+    Sxy=Sxy+x[i]*y[i]
+    Sx2=Sx2+x[i]**2
+    Sy2=Sy2+y[i]**2
+N=10
+r=(N*Sxy-Sx*Sy)/(math.sqrt(N*Sx2-Sx**2)*math.sqrt(N*Sy2-Sy**2))
+print("The Correlation Coefficient is %0.3f"%r)
+byx=(N*Sxy-Sx*Sy)/(N*Sx2-Sx**2)
+xmean=Sx/N
+ymean=Sy/N
+print("The regression line Y on X is ::: Y = %0.3f %0.3f (X - %0.3f)"%(ymean,byx,xmean))
+plt.scatter(x,y)
+def Reg(x):
+    return ymean + byx*(x-xmean)
+x=np.linspace(20,40,51)
+y1=Reg(x)
+plt.plot(x,y1,'r')
+```
+# Output : 
+<img width="408" alt="image" src="https://user-images.githubusercontent.com/75235554/170187047-2c241802-8cac-48cd-a2b6-95a1a35455e1.png">
+<img width="320" alt="image" src="https://user-images.githubusercontent.com/75235554/170187077-1d9e5721-93ba-43d6-9f33-0ff5dc023985.png">
 
-
-
-# Results and Output : 
+# Result :
+Thus, the Coeffificient of correlation and regression line using given data was analysed.
